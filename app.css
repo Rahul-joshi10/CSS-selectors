@@ -6,15 +6,18 @@ body {
     background-color: #f1faee;
 }
 
+/* Selecting an element by its name  */
 button {
     font-size: 30px;
     background-color: #a8dadc;
 }
 
+/* The (,) is a grouping method, it selects all the matching nodes. */
 h1,h2 {
     color: #1d3557;
 }
 
+/* # is used to select an element by it's id name */
 #signup{
     background-color: #1d3557;
     color: #f1faee;
@@ -24,12 +27,16 @@ span {
     color: #457b9d;
 }
 
+/* . dot is used to select an element by it's class name */
 .tag {
     background-color: #e63946;
     color: #f1faee;
     font-size: 16px;
 }
 
+/* The   (space) combinator selects nodes that are descendants of the first element.
+In this... "a" inside element with class "post" will be selected.
+mdn link: https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator*/
 .post a {
     color: #457b9d;
     font-weight: 700;
@@ -40,44 +47,63 @@ footer a {
     color: #e63946;
 }
 
+/*The + combinator selects adjacent siblings. This means that the second element directly follows the first, and both share the same parent.
+mdn link: https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator*/
 h2 + button {
     font-size: 20px;
 }
 
+/*Child combinator:-
+The > combinator selects nodes that are direct children of the first element. 
+that is "a" should only be nested inside footer and it should have no other parent other than footer element
+mdn link: https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator*/
 footer > a {
     color: #457b9d;
 }
 
+/*Attribute selector
+Selects all elements that have the given attribute.*/
 input[type="password"] {
     color: greenyellow;
 }
 
+/* attribute selector mdn link : https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors */
 a[href*="google"]{
     color: #1d3557;
 }
 
-
+/* :hover is a pseudo-class . It is generally triggered when the user hovers over an element with the cursor (mouse pointer).
+Mdn doc- https://developer.mozilla.org/en-US/docs/Web/CSS/:hover */
 .post a:hover {
     text-decoration: underline;
 }
 
-
+/* :active is also a pseudo class. It gets activated when user clicks on it.
+mdn link: https://developer.mozilla.org/en-US/docs/Web/CSS/:active */
 .post button:active {
     background-color: #02c39a;
 }
 
+/* :nth-of-type() is also a pseudo class. Mdn link:https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type */
 .post:nth-of-type(2n){
     background-color: #dfe8dc;
 }
 
+/* ::first-letter is a pseudo element. This will apply styles to the first letter of a given element.
+mdn link:https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter*/
 h2::first-letter {
     font-size: 50px;
 }
 
+/* This will apply style to only first line of p element. 
+mdn link: https://developer.mozilla.org/en-US/docs/Web/CSS/::first-line */
 p::first-line {
     color: purple;
 }
 
+/*The ::selection CSS pseudo-element applies styles to the part of a document that has been 
+highlighted by the user (such as clicking and dragging the mouse across text).
+mdn link: https://developer.mozilla.org/en-US/docs/Web/CSS/::selection*/
 p::selection {
     background-color: #fcbf49;
 }
